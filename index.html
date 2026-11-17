@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub - Food Delivery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">Foodie<span>Hub.</span></div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#restaurants">Restaurants</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="login-btn" id="login-button">Login</button>
+
+            <button class="login-btn" id="my-orders-button">
+                📦 My Orders
+            </button>
+
+            <button class="cart-btn" id="cart-button">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="tagline">FAST DELIVERY • FRESH FOOD</p>
+
+        <h1>
+            Delicious Food,<br>
+            Delivered To <span>Your Door.</span>
+        </h1>
+
+        <p class="hero-description">
+            Discover the best restaurants near you.
+            Order your favourite meals and enjoy
+            fresh food delivered to your doorstep.
+        </p>
+
+        <div class="search-box">
+            <input type="text" id="search-input"
+                   placeholder="Search for food or restaurants...">
+            <button id="search-button">Search</button>
+        </div>
+
+        <p class="delivery-info">
+            🚀 Fast Delivery | 🍽️ Fresh Food | ⭐ Quality Service
+        </p>
+    </div>
+
+    <div class="hero-image">
+        <div class="food-circle">🍕</div>
+        <div class="floating-food">🍔</div>
+        <div class="floating-food second">🍟</div>
+    </div>
+</section>
+
+<section class="categories section" id="categories">
+    <div class="section-heading">
+        <p>EXPLORE OUR MENU</p>
+        <h2>Popular Categories</h2>
+    </div>
+
+    <div class="category-container">
+        <div class="category-card"><div class="category-icon">🍕</div><h3>Pizza</h3></div>
+        <div class="category-card"><div class="category-icon">🍔</div><h3>Burgers</h3></div>
+        <div class="category-card"><div class="category-icon">🍛</div><h3>Biryani</h3></div>
+        <div class="category-card"><div class="category-icon">🍜</div><h3>Noodles</h3></div>
+        <div class="category-card"><div class="category-icon">🍰</div><h3>Desserts</h3></div>
+        <div class="category-card"><div class="category-icon">🥤</div><h3>Drinks</h3></div>
+    </div>
+</section>
+
+<section class="restaurants section" id="restaurants">
+    <div class="section-heading">
+        <p>OUR BEST SELECTION</p>
+        <h2>Popular Restaurants</h2>
+    </div>
+
+    <div class="restaurant-container">
+        <div class="restaurant-card">
+            <div class="restaurant-image">🍗</div>
+            <div class="restaurant-details">
+                <h3>Spicy Kitchen</h3>
+                <p>Indian • Biryani • North Indian</p>
+                <div class="restaurant-meta">
+                    <span>⭐ 4.5</span>
+                    <span>25-35 min</span>
+                </div>
+                <button class="view-menu-btn">View Menu</button>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">🍕</div>
+            <div class="restaurant-details">
+                <h3>Pizza Palace</h3>
+                <p>Pizza • Italian • Fast Food</p>
+                <div class="restaurant-meta">
+                    <span>⭐ 4.3</span>
+                    <span>20-30 min</span>
+                </div>
+                <button class="view-menu-btn">View Menu</button>
+            </div>
+        </div>
+
+        <div class="restaurant-card">
+            <div class="restaurant-image">🍔</div>
+            <div class="restaurant-details">
+                <h3>Burger House</h3>
+                <p>Burgers • Sandwiches • Snacks</p>
+                <div class="restaurant-meta">
+                    <span>⭐ 4.6</span>
+                    <span>30-40 min</span>
+                </div>
+                <button class="view-menu-btn">View Menu</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="food-menu section" id="menu">
+    <div class="section-heading">
+        <p>MADE WITH LOVE</p>
+        <h2>Our Popular Dishes</h2>
+    </div>
+
+    <div class="food-container">
+        <div class="food-card" data-name="Chicken Biryani">
+            <div class="food-image">🍛</div>
+            <div class="food-details">
+                <h3>Chicken Biryani</h3>
+                <p>Delicious aromatic chicken biryani.</p>
+                <div class="food-bottom">
+                    <span class="price">₹199</span>
+                    <button class="add-btn" data-name="Chicken Biryani" data-price="199">+ Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card" data-name="Cheese Pizza">
+            <div class="food-image">🍕</div>
+            <div class="food-details">
+                <h3>Cheese Pizza</h3>
+                <p>Fresh pizza with delicious cheese.</p>
+                <div class="food-bottom">
+                    <span class="price">₹249</span>
+                    <button class="add-btn" data-name="Cheese Pizza" data-price="249">+ Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card" data-name="Classic Burger">
+            <div class="food-image">🍔</div>
+            <div class="food-details">
+                <h3>Classic Burger</h3>
+                <p>Fresh and tasty classic burger.</p>
+                <div class="food-bottom">
+                    <span class="price">₹149</span>
+                    <button class="add-btn" data-name="Classic Burger" data-price="149">+ Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card" data-name="French Fries">
+            <div class="food-image">🍟</div>
+            <div class="food-details">
+                <h3>French Fries</h3>
+                <p>Crispy and golden potato fries.</p>
+                <div class="food-bottom">
+                    <span class="price">₹99</span>
+                    <button class="add-btn" data-name="French Fries" data-price="99">+ Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MY ORDERS SECTION -->
+<section class="section" id="my-orders-section" style="display:none;">
+    <div class="section-heading">
+        <p>YOUR FOODIEHUB ACTIVITY</p>
+        <h2>My Orders 📦</h2>
+        <p>View your previous orders and their status.</p>
+    </div>
+
+    <div id="my-orders-list">
+        <p>Loading your orders...</p>
+    </div>
+</section>
+
+<section class="about section" id="about">
+    <div class="about-content">
+        <p>WHY CHOOSE US?</p>
+        <h2>Good Food. Great Service.</h2>
+        <p>
+            FoodieHub connects customers with restaurants
+            through a convenient food ordering platform.
+            Enjoy a simple ordering experience, delicious
+            meals and convenient delivery.
+        </p>
+    </div>
+</section>
+
+<!-- Login and Registration Modal -->
+<div class="auth-modal" id="auth-modal">
+    <div class="auth-box">
+
+        <button class="close-auth" id="close-auth">&times;</button>
+
+        <h2 id="auth-title">Welcome to FoodieHub</h2>
+        <p id="auth-subtitle">Login to continue ordering</p>
+
+        <form id="login-form">
+            <input type="email" id="login-email"
+                   placeholder="Email address" required>
+
+            <input type="password" id="login-password"
+                   placeholder="Password" required>
+
+            <button type="submit">Login</button>
+
+            <p>Don't have an account?
+                <a href="#" id="show-register">Register</a>
+            </p>
+        </form>
+
+        <form id="register-form" style="display:none;">
+            <input type="text" id="register-name"
+                   placeholder="Full name" required>
+
+            <input type="email" id="register-email"
+                   placeholder="Email address" required>
+
+            <input type="password" id="register-password"
+                   placeholder="Password" required>
+
+            <input type="tel" id="register-phone"
+                   placeholder="Phone number" required>
+
+            <input type="text" id="register-address"
+                   placeholder="Delivery address" required>
+
+            <button type="submit">Create Account</button>
+
+            <p>Already have an account?
+                <a href="#" id="show-login">Login</a>
+            </p>
+        </form>
+
+        <p id="auth-message"></p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <h2>Foodie<span>Hub.</span></h2>
+        <p>Delicious food, delivered with love.</p>
+        <p>© 2026 FoodieHub. All Rights Reserved.</p>
+        <p>Developed as a Full-Stack Development Internship Project.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

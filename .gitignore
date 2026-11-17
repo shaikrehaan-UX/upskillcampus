@@ -1,0 +1,16 @@
+# Java and Maven
+**/target/
+*.class
+
+# Secrets and environment files
+.env
+**/.env
+application-local.properties
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
